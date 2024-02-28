@@ -82,7 +82,7 @@ export async function GET(req: Request) {
  * Handler for the POST request.
  *
  * @param {Request} req - The HTTP request object.
- * @returns {NextResponse} - The Next.js response object.
+ * @returns {Response} - The Next.js response object.
  */
 export async function POST(req: Request) {
   try {

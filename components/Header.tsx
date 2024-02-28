@@ -1,22 +1,18 @@
 "use client";
 import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
 import { ThemeToggle } from "./ThemeToggle";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { Button } from "./ui/button";
 
 const Header = () => {
+  const isUserLogin = false;
+
   return (
     <header>
-      <nav className="bg-background border-b-2 items-center py-3 flex justify-around">
-        <h1 className="text-2xl font-bold">{"Quizzy"}</h1>
+      <nav className="items-center py-3 flex justify-around">
+        <h1 className="text-2xl font-[Pacifico]">{"Wifty Taylor version"}</h1>
         <div className="gap-6 hidden sm:flex">
           <span className="text-sm hover:underline cursor-pointer">Home</span>
           <Link
@@ -34,14 +30,30 @@ const Header = () => {
           <SideBar />
         </div>
         <div className="hidden sm:flex gap-4 items-center">
-          <ThemeToggle />
-          <Avatar>
-            <AvatarImage
-              className="w-10 rounded-full h-10"
-              src={"https://github.com/lakshaykamat.png"}
-            />
-            <AvatarFallback>LK</AvatarFallback>
-          </Avatar>
+          {/* <ThemeToggle /> */}
+          {isUserLogin ? (
+            <>
+              <Avatar>
+                <AvatarImage
+                  className="w-10 rounded-full h-10"
+                  src={"https://github.com/lakshaykamat.png"}
+                />
+                <AvatarFallback>LK</AvatarFallback>
+              </Avatar>
+              <h1 className="text-sm">Lakshay Kamat</h1>
+            </>
+          ) : (
+            <>
+              <Link href={`/login`}>
+                <Button size={"sm"}>Login</Button>
+              </Link>
+              <Link href={`/register`}>
+                <Button size={"sm"} variant={"secondary"}>
+                  Sign up
+                </Button>
+              </Link>
+            </>
+          )}
         </div>
       </nav>
     </header>

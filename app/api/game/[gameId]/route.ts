@@ -12,14 +12,18 @@ export async function GET(req: Request, { params: { gameId } }: Props) {
   try {
     await connectMongodb();
 
-    console.log(gameId);
     if (!gameId)
       return NextResponse.json({
         isError: true,
         message: "Specify game id in query",
       });
     const game = await Game.findById(gameId);
-    console.log(gameId);
+    if (!game) {
+      return NextResponse.json({
+        isError: true,
+        message: "Game id is invalid!",
+      });
+    }
     return NextResponse.json({ game });
   } catch (err) {
     console.log(err);
@@ -29,12 +33,4 @@ export async function GET(req: Request, { params: { gameId } }: Props) {
       err,
     });
   }
-}
-function extractQueryFromRequest(req: Request) {
-  console.log(req.url);
-  const url = new URL(req.url);
-  const params = new URLSearchParams(url.search);
-  return {
-    id: params.get("id"),
-  };
 }
