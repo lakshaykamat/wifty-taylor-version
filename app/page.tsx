@@ -31,4 +31,21 @@ function HOme({}: Props) {
   );
 }
 
-export default HOme;
+const HomePage = () => {
+  return (
+    <div className="my-10 relative max-w-7xl mx-auto">
+      <img
+        src="/image/taylorr (1).png"
+        className="w-full h-[580px] grayscale drop-shadow-xl object-cover rounded-xl"
+      />
+      <div className="px-10 py-5 rounded-lg mx-10 bg-blend-saturation backdrop-blur-lg flex flex-col outline outline-gray-700 outline-1 gap-3 text-white absolute top-[20%]">
+        <h1 className="uppercase text-6xl font-extrabold">Super Swifty</h1>
+        <p className="sm:text-2xl font-semibold">
+          Let's see how much do you know taylor swift?
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default HomePage;
