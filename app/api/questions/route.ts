@@ -3,14 +3,14 @@ import { connectMongodb } from "@/lib/mongodb";
 import validateQuizId from "./helpers/validateQuizId";
 import { UserResponse, RequestBody } from "./postRequestBody";
 import createNewGame from "./helpers/createNewGame";
-import createError from "./helpers/createError";
-import HttpStatusCode from "./helpers/HttpStatusCode";
+import createError from "../helpers/createError";
+import HttpStatusCode from "../helpers/HttpStatusCode";
 import shuffleQuestions from "./helpers/shuffleQuestions";
 import calculateUserResult from "./helpers/calculateUserResult";
 import areAllQuestionsPresent from "./helpers/areAllQuestionsPresent";
 import calculateTotalScore from "./helpers/calculateTotalScore";
 import calculatePercentage from "./helpers/calculatePercentage";
-import extractQueryFromRequest from "./helpers/extractQueryFromRequest";
+import extractQueryFromRequest from "../helpers/extractQueryFromRequest";
 
 // Common response headers
 const RESPONSE_HEADERS = {

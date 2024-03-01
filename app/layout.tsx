@@ -50,7 +50,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="px-3 sm:px-10 pb-12 sm:max-w-7xl mx-auto">
+          <main className="px-7 sm:px-10 pb-12 sm:max-w-7xl mx-auto">
             {children}
           </main>
         </ThemeProvider>
