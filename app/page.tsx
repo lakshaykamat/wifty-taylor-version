@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import React from "react";
+import React from 'react';
 
 type Props = {};
 
@@ -32,14 +32,55 @@ function HOme({}: Props) {
 }
 
 const HomePage = () => {
+  const data = [
+    {
+      username:"Shikha Singh",
+      image:"https://i.pinimg.com/564x/52/65/c6/5265c6def69f0b41b51cff17df2c3a1f.jpg",
+      score:900
+    },
+    {
+      username:"Shikha Singh",
+      image:"https://i.pinimg.com/564x/52/65/c6/5265c6def69f0b41b51cff17df2c3a1f.jpg",
+      score:900
+    },    {
+      username:"Shikha Singh",
+      image:"https://i.pinimg.com/564x/52/65/c6/5265c6def69f0b41b51cff17df2c3a1f.jpg",
+      score:900
+    },    {
+      username:"Shikha Singh",
+      image:"https://i.pinimg.com/564x/52/65/c6/5265c6def69f0b41b51cff17df2c3a1f.jpg",
+      score:900
+    },    {
+      username:"Shikha Singh",
+      image:"https://i.pinimg.com/564x/52/65/c6/5265c6def69f0b41b51cff17df2c3a1f.jpg",
+      score:900
+    },    {
+      username:"Shikha Singh",
+      image:"https://i.pinimg.com/564x/52/65/c6/5265c6def69f0b41b51cff17df2c3a1f.jpg",
+      score:900
+    },    {
+      username:"Shikha Singh",
+      image:"https://i.pinimg.com/564x/52/65/c6/5265c6def69f0b41b51cff17df2c3a1f.jpg",
+      score:900
+    },
+    {
+      username:"Shikha Singh",
+      image:"https://i.pinimg.com/564x/52/65/c6/5265c6def69f0b41b51cff17df2c3a1f.jpg",
+      score:900
+    },    {
+      username:"Shikha Singh",
+      image:"https://i.pinimg.com/564x/52/65/c6/5265c6def69f0b41b51cff17df2c3a1f.jpg",
+      score:900
+    },
+  ]
   return (
-    <div className="my-10 relative max-w-7xl mx-auto">
+    <div className="my-10 relative sm:max-w-7xl mx-auto">
       <img
-        src="/image/taylorr (1).png"
-        className="w-full h-[580px] grayscale drop-shadow-xl object-cover rounded-xl"
+        src="/image/mobileView.jpeg"
+        className="w-full h-[550px] drop-shadow-xl object-cover rounded-xl filter "
       />
-      <div className="px-10 py-5 rounded-lg mx-10 bg-blend-saturation backdrop-blur-lg flex flex-col outline outline-gray-700 outline-1 gap-3 text-white absolute top-[20%]">
-        <h1 className="uppercase text-6xl font-extrabold">Super Swifty</h1>
+      <div className="sm:px-10 px-3 py-5 rounded-lg sm:mx-10 sm:bg-blend-saturation sm:backdrop-blur-lg flex flex-col sm:outline outline-gray-700 outline-1 gap-3 text-white absolute top-[5%]">
+        <h1 className="uppercase text-3xl sm:text-6xl font-extrabold">Super Swifty</h1>
         <p className="sm:text-2xl font-semibold">
           Let's see how much do you know taylor swift?
         </p>
