@@ -1,35 +1,35 @@
 "use client";
-import { generateRandomLeadearBoard } from "@/lib/utils";
+import { generateRandomLeaderboard } from "@/lib/utils";
 import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
 
 const Leadearboard = ({ limit }: { limit: number }) => {
-  return generateRandomLeadearBoard()
-    .slice(0, limit)
-    .map((item, index) => (
-      <div
-        key={index}
-        className={`flex gap-6 px-5 py-4 items-center justify-between bg-secondary text-secondary-foreground outline dark:outline-gray-700 outline-gray-200 outline-2 rounded-md`}
-      >
-        <div className="flex gap-4 items-center overflow-hidden">
-          <span className="text-lg w-[1.2rem]">{index + 1}.</span>
-          <div className="flex items-center gap-3">
-            <Avatar>
-              <AvatarImage
-                className="w-7 h-7 outline outline-1 rounded-full"
-                src={item.image}
-              />
-              <AvatarFallback>
-                <UserIcon />
-              </AvatarFallback>
-            </Avatar>
-            <h1 className="text-base text-ellipsis overflow-hidden">
-              {item.username}
-            </h1>
-          </div>
+  return generateRandomLeaderboard(limit).map((item, index) => (
+    <div
+      key={index}
+      className={`flex gap-6 px-5 py-4 items-center justify-between bg-secondary text-secondary-foreground outline dark:outline-gray-700 outline-gray-200 outline-2 rounded-md`}
+    >
+      <div className="flex gap-4 items-center overflow-hidden">
+        <span className="text-lg w-[1.2rem]">{index + 1}.</span>
+        <div className="flex items-center gap-3">
+          <Avatar>
+            <AvatarImage
+              className="w-7 h-7 outline outline-1 rounded-full"
+              src={item.avatar}
+            />
+            <AvatarFallback>
+              <UserIcon />
+            </AvatarFallback>
+          </Avatar>
+          <h1 className="text-base text-ellipsis overflow-hidden">
+            {item.username}
+          </h1>
         </div>
+      </div>
+      <div className="flex items-center gap-1">
         <p className="text-xl">{item.score}</p>
       </div>
-    ));
+    </div>
+  ));
 };
 
 const UserIcon = () => {

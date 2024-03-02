@@ -15,19 +15,15 @@ export function shuffleArray<T>(array: T[]): T[] {
   return array;
 }
 
-export function generateRandomLeadearBoard() {
-  let data = [];
-  for (let i = 0; i <= 14; i++) {
-    let obj = {
-      username: faker.internet.displayName(),
-      image: faker.image.avatar(),
-      score: faker.number.int({ min: 1000, max: 5000 }),
-    };
-    data[i] = obj;
-  }
-  const sortedData = [...data];
+export function generateRandomLeaderboard(limit: number) {
+  const data = Array.from({ length: limit }, () => ({
+    username: faker.internet.displayName(),
+    avatar: faker.image.avatar(),
+    score: faker.number.int({ min: 500, max: 2000 }),
+  }));
 
-  // Sort the array based on the 'score' property
-  sortedData.sort((a, b) => b.score - a.score);
+  // Sort the array based on the 'score' property in descending order
+  const sortedData = [...data].sort((a, b) => b.score - a.score);
+
   return sortedData;
 }
