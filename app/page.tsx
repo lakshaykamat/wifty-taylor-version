@@ -1,50 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { fakerDE as faker } from "@faker-js/faker";
-import Link from "next/link";
-import React from "react";
+import Leadearboard from "@/components/home/Leaderboard";
 
-type Props = {};
-
-function HOme({ }: Props) {
-  return (
-    <div className="flex flex-col items-center justify-center my-12">
-      <h1 className="text-4xl font-extrabold tracking-wider text-center uppercase scroll-m-20 my-7 lg:text-6xl">
-        Welcome to <span className="text-primary">Quizzy</span>
-      </h1>
-      <span className="font-semibold text-gray-600">Simple Clean Best</span>
-      <div className="flex flex-wrap items-center justify-center gap-6 mt-8">
-        <Link href={`/explore`}>
-          <Button className="rounded-full min-w-28" size={"lg"}>
-            Explore
-          </Button>
-        </Link>
-        <Link href={`/login`}>
-          <Button
-            size={"lg"}
-            className="rounded-full min-w-28"
-            variant={"secondary"}
-          >
-            Login
-          </Button>
-        </Link>
-      </div>
-    </div>
-  );
-}
-const data = generateRandomLeadearBoard();
 const HomePage = () => {
- 
-
-  // let numUsers;
-  // if (window.innerWidth < 640) { // kam nhi kr raha window//ruk
-  //   numUsers = 5;
-  // } else if (window.innerWidth < 768) {
-  //   numUsers = 10;
-  // } else {
-  //   numUsers = 15;
-  // }
-
-
   return (
     <div className="relative mx-auto my-10">
       <picture className="w-full outline">
@@ -67,55 +23,26 @@ const HomePage = () => {
           Let's see how much do you know taylor swift?
         </p>
       </div>
+
       <div className="mt-10 max-w-4xl mx-auto flex flex-col">
-        <h1 className="text-3xl font-bold text-white text-start mb-3">Leadearboard</h1>
-        <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-          <Leadearboard limit={12}/>
+        {/* <h1 className="text-3xl font-bold text-start mb-3">Leadearboard</h1> */}
+        <div className="mb-5 flex flex-col gap-1">
+          <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+            Swiftie Legends
+          </h3>
+          <p className="text-sm text-muted-foreground">
+            Conquer the Charts, Rule the Leaderboard!
+          </p>
         </div>
-        <div className="grid md:hidden grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
-          <Leadearboard limit={5}/>
+        <div className="hidden md:grid grid-cols-2 gap-5">
+          <Leadearboard limit={10} />
+        </div>
+        <div className="grid md:hidden grid-cols-1 gap-5">
+          <Leadearboard limit={5} />
         </div>
       </div>
     </div>
   );
 };
 
-// teen chahiye na 5, 10, 15... hmm wait maybe you can do it n ok ok smjhi ok  iski need hai
-//haan  
-//lekin ek min pheele tu bol phir mein bolta hu // ky BUT
-//you got it na? smaj gayi na???hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-// design pe do sabd khene chaunga ....bol
-// bkear hain// i know tabhi dekh rahi thi design haa yrr pls
-
-const Leadearboard = ({limit}:{limit:number})=>{
-  return(
-    data.slice(0, limit).map((item,index)  => (
-      <div key={index} className={`flex gap-6 font-bold border-2 px-3 py-4 items-center justify-between bg-card text-card-foreground rounded-md`}>
-        <div className="flex gap-2 items-center ">
-          <span>{index+1}.</span>
-          <img key={item.score} src={item.image} className="w-7 h-7 outline outline-1 rounded-full" />
-          <h1 className="text-sm text-ellipsis overflow-hidden">{item.username}</h1>
-        </div>
-        <p className="text-xl">{item.score}</p>
-      </div>
-    ))
-  )
-}
 export default HomePage;
-
-function generateRandomLeadearBoard() {
-  let data = [];
-  for (let i = 0; i <= 14; i++) {
-    let obj = {
-      username: faker.internet.displayName(),
-      image: faker.image.avatar(),
-      score: faker.number.int({ min: 1000, max: 5000 }),
-    };
-    data[i] = obj;
-  }
-  const sortedData = [...data];
-
-  // Sort the array based on the 'score' property
-  sortedData.sort((a, b) => b.score - a.score);
-  return sortedData;
-}
