@@ -78,10 +78,10 @@ const SideBar = () => {
           </Avatar>
           <h3>Lakshay Kamat</h3>
         </div>
-        <div className="flex items-center gap-3">
+        {/* <div className="flex items-center gap-3">
           <ThemeToggle />
           {theme.theme == "light" ? "Light Mode" : "Dark Mode"}
-        </div>
+        </div> */}
         <div className="mt-3 flex flex-col">
           <div className="p-3 flex rounded hover:bg-secondary">
             <Link href={`/`} className="text-sm cursor-pointer">

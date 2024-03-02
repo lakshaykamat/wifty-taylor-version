@@ -43,17 +43,17 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body>
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
-        >
-          <Header />
-          <main className="px-3 sm:px-10 pb-12 sm:max-w-7xl mx-auto">
-            {children}
-          </main>
-        </ThemeProvider>
+        > */}
+        <Header />
+        <main className="px-5 sm:px-10 pb-12 sm:max-w-7xl mx-auto">
+          {children}
+        </main>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
