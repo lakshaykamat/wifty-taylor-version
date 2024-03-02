@@ -5,12 +5,12 @@ const HomePage = () => {
     <div className="relative mx-auto my-10">
       <picture className="w-full outline">
         <source
-          srcSet="/image/taylor.png"
+          srcSet="/image/taylor.webp"
           className="w-full h-[680px] drop-shadow-xl object-cover rounded-xl"
           media="(min-width: 640px)"
         />
         <img
-          src="/image/mobileView.jpeg"
+          src="/image/mobileView.webp"
           className="w-full h-[580px] drop-shadow-xl object-cover rounded-xl"
           alt="Taylor Swift is singing"
         />
@@ -34,10 +34,10 @@ const HomePage = () => {
             Conquer the Charts, Rule the Leaderboard!
           </p>
         </div>
-        <div className="hidden md:grid grid-cols-2 gap-5">
+        <div className="hidden md:grid grid-flow-col grid-rows-5 gap-5">
           <Leadearboard limit={10} />
         </div>
-        <div className="grid md:hidden grid-cols-1 gap-5">
+        <div className="grid md:hidden grid-flow-col grid-rows-5 gap-5">
           <Leadearboard limit={5} />
         </div>
       </div>

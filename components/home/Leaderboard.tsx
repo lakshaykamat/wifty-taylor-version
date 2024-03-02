@@ -13,7 +13,7 @@ const Leadearboard = ({ limit }: { limit: number }) => {
         <div className="flex items-center gap-3">
           <Avatar>
             <AvatarImage
-              className="w-7 h-7 outline outline-1 rounded-full"
+              className="w-10 h-10 rounded-full border-2 border-gray-400"
               src={item.avatar}
             />
             <AvatarFallback>
