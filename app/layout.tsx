@@ -58,3 +58,25 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+const taylorAlbumsData = [
+  {
+    name: "Fearless",
+    description: "Fearless is Taylor Swift's second studio album, featuring hits like Love Story.",
+    albumCover: "/image/fearless.png",
+    quizAttempts: 1500,
+  },
+  {
+    name: "Speak Now",
+    description: "Speak Now is Taylor's third studio album, showcasing her songwriting talents and emotional depth.",
+    albumCover: "/image/speaknow.jpg",
+    quizAttempts: 2000,
+  },
+  {
+    name: "Red",
+    description: "Red is Taylor Swift's fourth studio album, blending country and pop elements seamlessly.",
+    albumCover: "/image/redcover.png",
+    quizAttempts: 4000,
+  }
+];

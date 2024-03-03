@@ -1,4 +1,6 @@
 import Leadearboard from "@/components/home/Leaderboard";
+import Cards from "@/components/home/Cards";
+import taylorAlbumsData from "@/components/taylorAlbum"
 
 const HomePage = () => {
   return (
@@ -41,7 +43,18 @@ const HomePage = () => {
           <Leadearboard limit={5} />
         </div>
       </div>
+      <div className="mt-10">
+        <h1 className="scroll-m-20 text-2xl font-semibold tracking-tight">Most Played</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-2">
+          {
+            taylorAlbumsData.map((album) => {
+              return <Cards albumCover={album.albumCover} name={album.name} description={album.description} quizAttempts={album.quizAttempts} />
+            })
+          }
+        </div>
+      </div>
     </div>
+
   );
 };
 
