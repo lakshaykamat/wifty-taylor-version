@@ -1,51 +1,23 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import React from "react";
+import React from 'react'
 
-type Props = {};
+type Props = {}
 
-function HOme({}: Props) {
+const HomePage = (props: Props) => {
   return (
-    <div className="flex flex-col items-center justify-center my-12">
-      <h1 className="scroll-m-20 my-7 text-center uppercase text-4xl tracking-wider font-extrabold lg:text-6xl">
-        Welcome to <span className="text-primary">Quizzy</span>
-      </h1>
-      <span className="text-gray-600 font-semibold">Simple Clean Best</span>
-      <div className="mt-8 flex gap-6 flex-wrap items-center justify-center">
-        <Link href={`/explore`}>
-          <Button className="rounded-full min-w-28" size={"lg"}>
-            Explore
-          </Button>
-        </Link>
-        <Link href={`/login`}>
-          <Button
-            size={"lg"}
-            className="rounded-full min-w-28"
-            variant={"secondary"}
-          >
-            Login
-          </Button>
-        </Link>
+    <div className=''>
+      <nav className='flex bg-[#D9D9D9] h-20 w-full'>
+      </nav>
+      <div className='flex flex-row w-full p-24'>
+        <div className='w-1/2 mt-7 ml-7 font-sans'>
+          <h1 className='text-7xl font-extrabold'>Taylor <span className='bg-gradient-to-l from-pink-400 via-pink-500 to-red-400 text-transparent bg-clip-text font-extrabold'> Fandom </span></h1>
+          <p className='text-xl'>“People haven't always been there for me but music always has.”</p>
+          <p className='text-xl'>-Tyalor Swift</p>
+        </div>
+        <div className='w-1/2 flex items-center justify-center'>
+          <img src='image/butterfly.png' className=' h-[360px]'/>
+        </div>
       </div>
     </div>
-  );
+  )
 }
-
-const HomePage = () => {
-  return (
-    <div className="my-10 relative max-w-7xl mx-auto">
-      <img
-        src="/image/taylorr (1).png"
-        className="w-full h-[580px] grayscale drop-shadow-xl object-cover rounded-xl"
-      />
-      <div className="px-10 py-5 rounded-lg mx-10 bg-blend-saturation backdrop-blur-lg flex flex-col outline outline-gray-700 outline-1 gap-3 text-white absolute top-[20%]">
-        <h1 className="uppercase text-6xl font-extrabold">Super Swifty</h1>
-        <p className="sm:text-2xl font-semibold">
-          Let's see how much do you know taylor swift?
-        </p>
-      </div>
-    </div>
-  );
-};
-
-export default HomePage;
+export default HomePage
