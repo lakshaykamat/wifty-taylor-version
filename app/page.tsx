@@ -106,7 +106,7 @@ const HomePage = (props: Props) => {
         <p className='text-lg font-thin'>Speeding towards your destination with Swift.</p>
         <div className='grid gap-3 sm:grid-cols-2 grid-cols-1'>
           {
-            DATA.map((user) => <LeaderBoardCard name={user.name} score={user.score} avatar={user.userIcon} />)
+            DATA.map((user,i) => <LeaderBoardCard  key={i} name={user.name} score={user.score} avatar={user.userIcon} />)
           }
         </div>
       </div>
@@ -141,7 +141,7 @@ const HeroSection = () => {
     <div className='flex flex-col-reverse sm:flex-row py-7 justify-between items-center'>
       <div className=''>
         <h1 className='text-7xl font-extrabold tracking-wide'>Taylor <span className='bg-gradient-to-l from-pink-400 via-pink-500 to-red-400 text-transparent bg-clip-text font-extrabold'> Fandom </span></h1>
-        <p className="text-lg text-muted-foreground">“People haven't always been there for me but music always has.”’<br/>-- Tyalor Swift</p>
+        <p className="text-lg text-muted-foreground">“People haven&apos;t always been there for me but music always has.”<br/>-- Tyalor Swift</p>
         <button className='bg-[#92F4DC] h-10 w-64 rounded-md mt-3 text-sm font-bold font-sans'>CHECK IN INTO SWIFTY SPACE</button>
       </div>
       {/* <div className='w-1/2 flex items-center justify-center'> */}
