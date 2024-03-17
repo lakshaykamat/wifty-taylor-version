@@ -44,12 +44,19 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body>
-      <nav className='flex bg-[rgb(217,217,217)] h-16'>
-      </nav>
-        <main className="max-w-6xl mx-auto px-6">
-        {children}
+        <nav className='flex bg-black h-16'>
+        </nav>
+        <main className="max-w-6xl mx-auto px-6 py-6">
+          {children}
         </main>
-       
+        <footer className="flex justify-between items-center bg-black h-20 text-white px-6 font-sans">
+          <p>© Copyright 2024</p>
+          <div className="flex gap-3">
+            <p>Discord</p>
+            <p>Tweeter</p>
+            <p>Instagram</p>
+          </div>
+        </footer>
         {/* <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -57,7 +64,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header /> */}
-          {/* <main className="px-10 pb-12 max-w-7xl mx-auto">{children}</main> */}
+        {/* <main className="px-10 pb-12 max-w-7xl mx-auto">{children}</main> */}
         {/* </ThemeProvider> */}
       </body>
     </html>
