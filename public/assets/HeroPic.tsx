@@ -9,7 +9,7 @@ const HeroPic = (props: Props) => {
         viewBox="0 0 400 300"
         data-imageid="music-flatline"
         // imagename="Music"
-        className="illustrations_image sm:w-[450px] w-72 "
+        className="illustrations_image w-full"
         // style={{ width: 158 }}
       >
         <g id="_72_music" data-name="#72_music">

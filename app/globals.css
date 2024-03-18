@@ -11,7 +11,7 @@
     font-family: "Lato", sans-serif;
     @apply border-border;
   }
-  body {;
+  body {
     @apply bg-background text-foreground;
   }
   :root {

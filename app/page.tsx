@@ -43,7 +43,7 @@ const HomePage = () => {
       <div className='max-w-2xl mx-auto'>
         <div className='mb-3 flex flex-col '>
         <h1 className='text-3xl font-bold'>Siwfties Section</h1>
-        <p className='text-lg text-muted-foreground'>Speeding towards your destination with Swift.</p>
+        <p className='text-base text-muted-foreground'>Speeding towards your destination with Swift.</p>
         </div>
         <div className='grid gap-2 sm:grid-cols-2 grid-cols-1'>
           {
