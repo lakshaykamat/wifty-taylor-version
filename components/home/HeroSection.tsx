@@ -9,7 +9,7 @@ const HeroSection = () => {
           <p className="pt-3 text-lg text-muted-foreground mb-2">“People haven&apos;t always been there for me but music always has.”<br />-- Tyalor Swift</p>
           <button className='bg-black rounded-md px-2 py-3 drop-shadow-xl text-white  w-[100%] sm:w-[90%] uppercase'>check in into <b>Swifty SPACE</b></button>
         </div>
-        <div className="w-1/2 sm:w-[150px]">
+        <div className="w-1/2 sm:w-[450px]">
         <HeroPic/>
         </div>
       </div>

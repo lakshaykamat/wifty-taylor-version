@@ -1,6 +1,8 @@
+import QuizCard from '@/components/QuizCard'
 import HeroSection from '@/components/home/HeroSection'
 import LeaderBoardCard from '@/components/home/LeaderboardCard'
-
+import QuizCards from '@/components/home/QuizCards'
+import SwiftySpace from '@/components/home/SwiftySpace'
 
 const HomePage = () => {
   const DATA = [
@@ -51,6 +53,18 @@ const HomePage = () => {
           }
         </div>
       </div>
+      {/* Quote section */}
+      <div className='flex max-w-xl mx-auto p-7'>
+        <p className='text-muted-foreground italic'>“No matter what happens in life, be good to people. Being good to people is a wonderful legacy to leave behind.”<br />-- Taylor Swift</p>
+      </div>
+
+      {/* Quiz Cards */}
+      <QuizCards />
+
+      {/* Swifty Space */}
+      <SwiftySpace />
+
+      {/* News and Annoucement */}
     </div>
   )
 }
