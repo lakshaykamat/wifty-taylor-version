@@ -11,8 +11,7 @@ const NewsAnnounceSvg = (props: Props) => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 400 300"
                 data-imageid="news-presenter-flatline"
-                className="illustrations_image"
-                style={{ width: 158 }}
+                className="illustrations_image w-full"
             >
                 <path
                     d="M357.51,224.18h-315a.5.5,0,0,1-.5-.5V31.25a.5.5,0,0,1,.5-.5h315a.5.5,0,0,1,.5.5V223.68A.5.5,0,0,1,357.51,224.18ZM43,223.18H357V31.75H43Z"

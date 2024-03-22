@@ -3,6 +3,9 @@ import HeroSection from '@/components/home/HeroSection'
 import LeaderBoardCard from '@/components/home/LeaderboardCard'
 import QuizCards from '@/components/home/QuizCards'
 import SwiftySpace from '@/components/home/SwiftySpace'
+import NewsAnnounce from '@/components/home/NewsAnnounce'
+import SongOfDay from '@/components/home/SongOfDay'
+
 
 const HomePage = () => {
   const DATA = [
@@ -44,7 +47,7 @@ const HomePage = () => {
       {/* Leader board section */}
       <div className='max-w-2xl mx-auto'>
         <div className='mb-3 flex flex-col '>
-        <h1 className='text-3xl font-bold'>Siwfties Section</h1>
+        <h1 className='text-4xl font-bold'>Siwfties Section</h1>
         <p className='text-base text-muted-foreground'>Speeding towards your destination with Swift.</p>
         </div>
         <div className='grid gap-2 sm:grid-cols-2 grid-cols-1'>
@@ -65,6 +68,10 @@ const HomePage = () => {
       <SwiftySpace />
 
       {/* News and Annoucement */}
+      <NewsAnnounce />
+
+      {/* Song of the day */}
+      <SongOfDay />
     </div>
   )
 }
