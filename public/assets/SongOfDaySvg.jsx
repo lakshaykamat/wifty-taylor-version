@@ -4,9 +4,7 @@ const SongOfDaySvg = () => {
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className='w-full'
-        // width="397.72474"
-        // height="407.127"
+        width="250"
         viewBox="0 0 397.72474 407.127"
         xmlnsXlink="http://www.w3.org/1999/xlink"
       >

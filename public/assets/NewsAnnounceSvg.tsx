@@ -6,6 +6,7 @@ const NewsAnnounceSvg = (props: Props) => {
     return (
         <div>
             <svg
+            width={650}
                 id="_100_news_presenter"
                 data-name="#100_news_presenter"
                 xmlns="http://www.w3.org/2000/svg"

@@ -47,7 +47,7 @@ const HomePage = () => {
       {/* Leader board section */}
       <div className='max-w-2xl mx-auto'>
         <div className='mb-3 flex flex-col '>
-        <h1 className='text-4xl font-bold'>Siwfties Section</h1>
+        <h1 className='sm:text-4xl text-2xl'>Siwfties Section</h1>
         <p className='text-base text-muted-foreground'>Speeding towards your destination with Swift.</p>
         </div>
         <div className='grid gap-2 sm:grid-cols-2 grid-cols-1'>
