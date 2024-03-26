@@ -1,51 +1,79 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import React from "react";
+import QuizCard from '@/components/QuizCard'
+import HeroSection from '@/components/home/HeroSection'
+import LeaderBoardCard from '@/components/home/LeaderboardCard'
+import QuizCards from '@/components/home/QuizCards'
+import SwiftySpace from '@/components/home/SwiftySpace'
+import NewsAnnounce from '@/components/home/NewsAnnounce'
+import SongOfDay from '@/components/home/SongOfDay'
 
-type Props = {};
-
-function HOme({}: Props) {
-  return (
-    <div className="flex flex-col items-center justify-center my-12">
-      <h1 className="scroll-m-20 my-7 text-center uppercase text-4xl tracking-wider font-extrabold lg:text-6xl">
-        Welcome to <span className="text-primary">Quizzy</span>
-      </h1>
-      <span className="text-gray-600 font-semibold">Simple Clean Best</span>
-      <div className="mt-8 flex gap-6 flex-wrap items-center justify-center">
-        <Link href={`/explore`}>
-          <Button className="rounded-full min-w-28" size={"lg"}>
-            Explore
-          </Button>
-        </Link>
-        <Link href={`/login`}>
-          <Button
-            size={"lg"}
-            className="rounded-full min-w-28"
-            variant={"secondary"}
-          >
-            Login
-          </Button>
-        </Link>
-      </div>
-    </div>
-  );
-}
 
 const HomePage = () => {
+  const DATA = [
+    {
+      userIcon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCyoaze4gk8HUF57dHFOglmTJ6RNHf13LlnQ&usqp=CAU",
+      name: "Lakshay Kamat",
+      score: 234
+    },
+    {
+      userIcon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCyoaze4gk8HUF57dHFOglmTJ6RNHf13LlnQ&usqp=CAU",
+      name: "Chitransh verma",
+      score: 234
+    },
+    {
+      userIcon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCyoaze4gk8HUF57dHFOglmTJ6RNHf13LlnQ&usqp=CAU",
+      name: "Anshuman prajapati",
+      score: 234
+    },
+    {
+      userIcon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCyoaze4gk8HUF57dHFOglmTJ6RNHf13LlnQ&usqp=CAU",
+      name: "Lakshay Kamat",
+      score: 234
+    },
+    {
+      userIcon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCyoaze4gk8HUF57dHFOglmTJ6RNHf13LlnQ&usqp=CAU",
+      name: "Lakshay Kamat",
+      score: 234
+    },
+    {
+      userIcon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCyoaze4gk8HUF57dHFOglmTJ6RNHf13LlnQ&usqp=CAU",
+      name: "Lakshay Kamat",
+      score: 234
+    }
+  ]
   return (
-    <div className="my-10 relative max-w-7xl mx-auto">
-      <img
-        src="/image/taylorr (1).png"
-        className="w-full h-[580px] grayscale drop-shadow-xl object-cover rounded-xl"
-      />
-      <div className="px-10 py-5 rounded-lg mx-10 bg-blend-saturation backdrop-blur-lg flex flex-col outline outline-gray-700 outline-1 gap-3 text-white absolute top-[20%]">
-        <h1 className="uppercase text-6xl font-extrabold">Super Swifty</h1>
-        <p className="sm:text-2xl font-semibold">
-          Let's see how much do you know taylor swift?
-        </p>
+    <div className=''>
+      {/* Hero section */}
+      <HeroSection />
+      {/* Leader board section */}
+      <div className='max-w-2xl mx-auto'>
+        <div className='mb-3 flex flex-col '>
+        <h1 className='text-4xl font-bold'>Siwfties Section</h1>
+        <p className='text-base text-muted-foreground'>Speeding towards your destination with Swift.</p>
+        </div>
+        <div className='grid gap-2 sm:grid-cols-2 grid-cols-1'>
+          {
+            DATA.map((user, i) => <LeaderBoardCard key={i} name={user.name} score={user.score} avatar={user.userIcon} />)
+          }
+        </div>
       </div>
-    </div>
-  );
-};
+      {/* Quote section */}
+      <div className='flex max-w-xl mx-auto p-7'>
+        <p className='text-muted-foreground italic'>“No matter what happens in life, be good to people. Being good to people is a wonderful legacy to leave behind.”<br />-- Taylor Swift</p>
+      </div>
 
-export default HomePage;
+      {/* Quiz Cards */}
+      <QuizCards />
+
+      {/* Swifty Space */}
+      <SwiftySpace />
+
+      {/* News and Annoucement */}
+      <NewsAnnounce />
+
+      {/* Song of the day */}
+      <SongOfDay />
+    </div>
+  )
+}
+
+export default HomePage
